@@ -2,12 +2,12 @@ import { motion } from 'framer-motion';
 import ProductCard from './ProductCard';
 import { Product } from '../types';
 
-import img1 from '../assets/images/brincos/brinco-1.png';
-import img2 from '../assets/images/brincos/brinco-2.png';
-import img3 from '../assets/images/brincos/brinco-3.png';
-import img4 from '../assets/images/brincos/brinco-4.png';
-import img5 from '../assets/images/brincos/brinco-5.png';
-import img6 from '../assets/images/brincos/brinco-6.png';
+import img1 from '../assets/images/brincos/brinco1.jpg';
+import img2 from '../assets/images/brincos/brinco2.jpg';
+import img3 from '../assets/images/brincos/brinco3.jpg';
+import img4 from '../assets/images/brincos/brinco4.jpg';
+import img5 from '../assets/images/brincos/brinco5.jpg';
+import img6 from '../assets/images/brincos/brinco6.jpg';
 import img7 from '../assets/images/brincos/brinco-7.png';
 import img8 from '../assets/images/brincos/brinco-8.png';
 import img9 from '../assets/images/brincos/brinco-9.png';
@@ -18,19 +18,19 @@ import img13 from '../assets/images/brincos/brinco-13.png';
 import img14 from '../assets/images/brincos/brinco-14.png';
 import img15 from '../assets/images/brincos/brinco-15.png';
 
-import heroImg from '../assets/images/hero.png';
-import editorialImg from '../assets/images/pulseira-aurora.png';
-import colarImg from '../assets/images/colar-perola.png';
+import heroImg from '../assets/images/hero2.jpg';
+import editorialImg from '../assets/images/hero1.jpg';
+import colarImg from '../assets/images/hero4.jpg';
 import logoFilipa from '../assets/images/logo-filipa.png';
 
 // Estrutura com 15 espaços para produtos desta categoria
 export const produtosOriginais = [
-    { id: 'BrincosPage-1', name: 'Brincos Exemplo 1', category: 'Brincos', price: 199.90, image: img1, isNew: true },
-    { id: 'BrincosPage-2', name: 'Brincos Exemplo 2', category: 'Brincos', price: 149.90, image: img2, isNew: false },
-    { id: 'BrincosPage-3', name: 'Brincos Exemplo 3', category: 'Brincos', price: 129.50, image: img3, isNew: false },
-    { id: 'BrincosPage-4', name: 'Brincos Exemplo 4', category: 'Brincos', price: 210.00, image: img4, isNew: false },
-    { id: 'BrincosPage-5', name: 'Brincos Exemplo 5', category: 'Brincos', price: 0, image: img5, isNew: false },
-    { id: 'BrincosPage-6', name: 'Brincos Exemplo 6', category: 'Brincos', price: 0, image: img6, isNew: false },
+    { id: 'BrincosPage-1', name: 'Brinco Rústico com Detalhe Pedra Azul', category: 'Brincos', price: 10.00, image: img1, isNew: true },
+    { id: 'BrincosPage-2', name: 'Brinco Formato Coração', category: 'Brincos', price: 12.00, image: img2, isNew: false },
+    { id: 'BrincosPage-3', name: 'Brinco Acrílico Verde-Mate', category: 'Brincos', price: 7.00, image: img3, isNew: false },
+    { id: 'BrincosPage-4', name: 'Brinco Acrílico Verde-Água', category: 'Brincos', price: 7.00, image: img4, isNew: false },
+    { id: 'BrincosPage-5', name: 'Brinco Borboleta', category: 'Brincos', price: 10.00, image: img5, isNew: false },
+    { id: 'BrincosPage-6', name: 'Brinco Acrilico Verde Escuro', category: 'Brincos', price: 7.00, image: img6, isNew: false },
     { id: 'BrincosPage-7', name: 'Brincos Exemplo 7', category: 'Brincos', price: 0, image: img7, isNew: false },
     { id: 'BrincosPage-8', name: 'Brincos Exemplo 8', category: 'Brincos', price: 0, image: img8, isNew: false },
     { id: 'BrincosPage-9', name: 'Brincos Exemplo 9', category: 'Brincos', price: 0, image: img9, isNew: false },
@@ -136,9 +136,9 @@ const BrincosPage = () => {
                         <h2 className="text-4xl md:text-5xl font-serif text-[#2c2c2c]">Brincos</h2>
                     </motion.div>
 
-                    <div className="w-full flex flex-wrap justify-center gap-4 md:gap-6">
+                    <div className="category-products-grid">
                         {produtosOriginais.map((product) => (
-                            <div key={product.id} className="w-[200px] md:w-[220px]">
+                            <div key={product.id} className="category-product-card">
                                 <ProductCard product={product as Product} />
                             </div>
                         ))}

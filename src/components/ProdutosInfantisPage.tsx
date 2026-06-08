@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 import ProductCard from './ProductCard';
 import { Product } from '../types';
 
-import img1 from '../assets/images/produtos-infantis/infantil-1.png';
-import img2 from '../assets/images/produtos-infantis/infantil-2.png';
-import img3 from '../assets/images/produtos-infantis/infantil-3.png';
+import img1 from '../assets/images/produtos-infantis/infantil1.jpg';
+import img2 from '../assets/images/produtos-infantis/infantil2.jpg';
+import img3 from '../assets/images/produtos-infantis/infantil3.jpg';
 import img4 from '../assets/images/produtos-infantis/infantil-4.png';
 import img5 from '../assets/images/produtos-infantis/infantil-5.png';
 import img6 from '../assets/images/produtos-infantis/infantil-6.png';
@@ -25,9 +25,9 @@ import logoFilipa from '../assets/images/logo-filipa.png';
 
 // Estrutura com 15 espaços para produtos desta categoria
 export const produtosOriginais = [
-    { id: 'ProdutosInfantisPage-1', name: 'Produtos Infantis Exemplo 1', category: 'Produtos Infantis', price: 199.90, image: img1, isNew: true },
-    { id: 'ProdutosInfantisPage-2', name: 'Produtos Infantis Exemplo 2', category: 'Produtos Infantis', price: 149.90, image: img2, isNew: false },
-    { id: 'ProdutosInfantisPage-3', name: 'Produtos Infantis Exemplo 3', category: 'Produtos Infantis', price: 129.50, image: img3, isNew: false },
+    { id: 'ProdutosInfantisPage-1', name: 'Ganchos para crianças Individual', category: 'Produtos Infantis', price: 4.00, image: img1, isNew: true },
+    { id: 'ProdutosInfantisPage-2', name: 'Conjunto Lacinho para criança', category: 'Produtos Infantis', price: 12.50, image: img2, isNew: false },
+    { id: 'ProdutosInfantisPage-3', name: 'Conjunto de Ganhos Completo', category: 'Produtos Infantis', price: 20.00, image: img3, isNew: false },
     { id: 'ProdutosInfantisPage-4', name: 'Produtos Infantis Exemplo 4', category: 'Produtos Infantis', price: 210.00, image: img4, isNew: false },
     { id: 'ProdutosInfantisPage-5', name: 'Produtos Infantis Exemplo 5', category: 'Produtos Infantis', price: 0, image: img5, isNew: false },
     { id: 'ProdutosInfantisPage-6', name: 'Produtos Infantis Exemplo 6', category: 'Produtos Infantis', price: 0, image: img6, isNew: false },
@@ -136,9 +136,9 @@ const ProdutosInfantisPage = () => {
                         <h2 className="text-4xl md:text-5xl font-serif text-[#2c2c2c]">Produtos Infantis</h2>
                     </motion.div>
 
-                    <div className="w-full flex flex-wrap justify-center gap-4 md:gap-6">
+                    <div className="category-products-grid">
                         {produtosOriginais.map((product) => (
-                            <div key={product.id} className="w-[200px] md:w-[220px]">
+                            <div key={product.id} className="category-product-card">
                                 <ProductCard product={product as Product} />
                             </div>
                         ))}

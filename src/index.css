@@ -8,15 +8,12 @@
 
   --bg-primary: #ffffff;
   --bg-secondary: #faf9f6;
-  /* Marfim/Creame */
   --bg-accent: #f5f2ed;
-  /* Champagne/Bege */
 
   --color-gold: #d9b99b;
   --color-gold-light: #f4e4d4;
-  --color-pink: #d9b99b;
-  /* Rosado Nude elegante */
-  --color-pink-light: #f4e4d4;
+  --color-pink: #d58fa0;
+  --color-pink-light: #f8dfe4;
   --color-text-main: #2c2c2c;
   --color-text-muted: #666666;
   --color-border: #e8e4de;
@@ -83,7 +80,6 @@ img {
   }
 }
 
-/* Base Animations */
 .fade-up {
   opacity: 0;
   transform: translateY(20px);
@@ -99,34 +95,660 @@ img {
   }
 }
 
+/* HOME: separa o hero do bloco Em Destaque */
+.hero-section {
+  position: relative;
+  z-index: 1;
+}
 
-/* Home catalog grid override - desktop always 6, mobile only 2 */
+.featured-showcase {
+  position: relative;
+  z-index: 2;
+  clear: both;
+  margin-top: 70px;
+}
+
+.featured-card img {
+  object-position: center;
+}
+
+/* HOME catalog grid override - desktop sempre 6, mobile apenas 2 */
 .home-products-grid {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 1.25rem;
+  display: grid !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  gap: 1.25rem !important;
   align-items: start;
 }
 
 .home-product-card {
   width: 100%;
   min-width: 0;
+  display: block !important;
+}
+
+.home-product-card>* {
+  width: 100%;
+  max-width: none !important;
 }
 
 @media (max-width: 520px) {
+  .hero-section {
+    padding-top: 7.75rem !important;
+    padding-bottom: 4.5rem !important;
+  }
+
+  .hero-image-stack {
+    transform: none !important;
+    margin-top: 0.25rem;
+  }
+
+  .hero-arch-card {
+    max-width: 118px !important;
+  }
+
+  .featured-showcase {
+    padding-top: 1.75rem !important;
+    padding-bottom: 2.75rem !important;
+  }
+
+  .featured-card {
+    min-height: 330px !important;
+  }
+
   .home-products-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.9rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.9rem !important;
   }
 
   .home-product-extra {
-    display: none;
+    display: none !important;
   }
 }
 
 @media (min-width: 521px) and (max-width: 900px) {
   .home-products-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (min-width: 901px) {
+  .home-products-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  }
+
+  .home-product-extra {
+    display: block !important;
+  }
+}
+
+.featured-label {
+  display: block;
+  font-size: 20px;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: #d58fa0;
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+
+/* AJUSTES MANUAIS DO BLOCO EM DESTAQUE */
+
+/* Controla a secção inteira: distância do hero e largura geral */
+.featured-showcase {
+  max-width: 980px !important;
+  margin: 95px auto 70px !important;
+  padding: 0 24px !important;
+  text-align: center !important;
+}
+
+/* Força o texto "EM DESTAQUE" mesmo que o App.tsx tenha outra classe */
+.featured-showcase span,
+.featured-showcase .featured-label {
+  font-size: 16px !important;
+  letter-spacing: 0.45em !important;
+  text-transform: uppercase !important;
+  color: #d58fa0 !important;
+  font-weight: 600 !important;
+  margin-bottom: 12px !important;
+  display: block !important;
+}
+
+/* Título principal */
+.featured-showcase h2 {
+  font-size: 26px !important;
+  line-height: 1.15 !important;
+  margin-bottom: 12px !important;
+  color: #2c2c2c !important;
+}
+
+/* Subtítulo */
+.featured-showcase p {
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+  max-width: 680px !important;
+  margin: 0 auto 26px !important;
+  color: #666 !important;
+}
+
+/* Caixa/slide da imagem */
+.featured-card {
+  width: 100% !important;
+  max-width: 640px !important;
+  height: 250px !important;
+  min-height: 250px !important;
+  margin: 30px auto 0 !important;
+  border-radius: 32px !important;
+  overflow: hidden !important;
+}
+
+/* Imagem dentro da caixa */
+.featured-card img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .featured-showcase {
+    max-width: 100% !important;
+    margin: 65px auto 48px !important;
+    padding: 0 18px !important;
+  }
+
+  .featured-showcase span,
+  .featured-showcase .featured-label {
+    font-size: 14px !important;
+    letter-spacing: 0.35em !important;
+    margin-bottom: 10px !important;
+  }
+
+  .featured-showcase h2 {
+    font-size: 28px !important;
+    line-height: 1.15 !important;
+  }
+
+  .featured-showcase p {
+    font-size: 14px !important;
+    max-width: 330px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .featured-card {
+    max-width: 100% !important;
+    height: 210px !important;
+    min-height: 210px !important;
+    border-radius: 24px !important;
+    margin-top: 24px !important;
+  }
+}
+
+/* MENU ABERTO - popup lateral elegante */
+.mobile-menu {
+  position: fixed !important;
+  top: 52px !important;
+  left: 0 !important;
+  right: auto !important;
+  bottom: auto !important;
+
+  width: 330px !important;
+  max-width: 88vw !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: calc(100vh - 52px) !important;
+
+  z-index: 9998 !important;
+  background: #faf8f5 !important;
+  border-right: 1px solid #e8e4de !important;
+  border-bottom: 1px solid #e8e4de !important;
+  box-shadow: 18px 24px 50px rgba(0, 0, 0, 0.06) !important;
+  overflow-y: auto !important;
+
+  animation: menuDropDown 0.38s ease-out both !important;
+}
+
+/* animação suave a descer */
+@keyframes menuDropDown {
+  from {
+    opacity: 0;
+    transform: translateY(-14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* remove o cabeçalho interno duplicado do popup */
+.mobile-menu>div>div:first-child,
+.mobile-menu header,
+.mobile-menu img,
+.mobile-menu .menu-logo {
+  display: none !important;
+}
+
+/* área dos links */
+.mobile-menu>div {
+  padding: 24px 28px 30px !important;
+  gap: 7px !important;
+}
+
+/* links */
+.mobile-menu button {
+  font-family: var(--font-serif) !important;
+  font-size: 19px !important;
+  line-height: 1.18 !important;
+  letter-spacing: 0.01em !important;
+  font-weight: 400 !important;
+  color: #2c2c2c !important;
+  text-align: left !important;
+}
+
+.mobile-menu button:hover {
+  color: #d58fa0 !important;
+}
+
+/* mobile pequeno */
+@media (max-width: 520px) {
+  .mobile-menu {
+    top: 50px !important;
+    width: 84vw !important;
+    max-height: calc(100vh - 50px) !important;
+  }
+
+  .mobile-menu>div {
+    padding: 22px 24px 28px !important;
+    gap: 6px !important;
+  }
+
+  .mobile-menu button {
+    font-size: 18px !important;
+    line-height: 1.15 !important;
+  }
+}
+
+/* Remove cabeçalho duplicado dentro do popup do menu */
+.mobile-menu>div:first-child {
+  display: none !important;
+}
+
+/* Garante que a área dos links sobe depois de remover o cabeçalho */
+.mobile-menu>div:last-child {
+  padding-top: 24px !important;
+}
+
+/* PÁGINAS INTERNAS: evita que o conteúdo fique por baixo do header */
+main>section:first-child,
+.page-hero,
+.category-hero,
+.collection-hero {
+  padding-top: 130px !important;
+}
+
+@media (max-width: 520px) {
+
+  main>section:first-child,
+  .page-hero,
+  .category-hero,
+  .collection-hero {
+    padding-top: 115px !important;
+  }
+}
+
+/* Corrige imagens/hero das páginas internas no mobile */
+@media (max-width: 520px) {
+
+  .page-hero img,
+  .category-hero img,
+  .collection-hero img,
+  main>section:first-child img {
+    max-width: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+
+  .page-hero,
+  .category-hero,
+  .collection-hero {
+    overflow: hidden !important;
+  }
+}
+
+/* PÁGINAS DE COLEÇÃO: força 2 cards por linha no mobile */
+@media (max-width: 520px) {
+
+  .collection-grid,
+  .products-grid,
+  .category-products-grid,
+  .product-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.9rem !important;
+  }
+
+  .collection-grid>*,
+  .products-grid>*,
+  .category-products-grid>*,
+  .product-grid>* {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+  }
+}
+
+/* HERO DAS PÁGINAS INTERNAS - mobile: bloco inteiro organizado */
+@media (max-width: 520px) {
+  main section:first-child {
+    padding-top: 15px !important;
+    padding-bottom: 54px !important;
+    overflow: hidden !important;
+  }
+
+  /* Bloco principal do hero: texto + imagens */
+  main section:first-child>div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 18px !important;
+  }
+
+  /* Área das 3 imagens */
+  main section:first-child div[class*="flex-row"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    overflow: visible !important;
+    margin-top: 6px !important;
+    transform: translateX(10px) !important;
+  }
+
+  /* Cada imagem do arco */
+  main section:first-child div[class*="rounded-t-full"] {
+    width: 27vw !important;
+    max-width: 104px !important;
+    min-width: 0 !important;
+    aspect-ratio: 3 / 4 !important;
+    overflow: hidden !important;
+  }
+
+  main section:first-child div[class*="rounded-t-full"] img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+}
+
+/* CARRINHO - layout compacto e elegante */
+.cart-page {
+  padding-top: 130px !important;
+}
+
+.cart-item {
+  display: grid !important;
+  grid-template-columns: 118px 1fr !important;
+  gap: 18px !important;
+  align-items: center !important;
+  padding: 14px !important;
+  border-radius: 24px !important;
+  background: #fff !important;
+  border: 1px solid #e8e4de !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.03) !important;
+  transition: all 0.35s ease !important;
+}
+
+.cart-item:hover {
+  border-color: rgba(213, 143, 160, 0.45) !important;
+}
+
+.cart-item-image {
+  width: 118px !important;
+  height: 138px !important;
+  border-radius: 18px !important;
+  overflow: hidden !important;
+  background: #faf8f5 !important;
+  border: 1px solid #f4efe8 !important;
+}
+
+.cart-item-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.6s ease !important;
+}
+
+.cart-item:hover .cart-item-image img {
+  transform: scale(1.05) !important;
+}
+
+.cart-item-info {
+  min-width: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 18px !important;
+}
+
+.cart-item-top,
+.cart-item-bottom {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 14px !important;
+}
+
+.cart-item-title {
+  font-family: var(--font-serif) !important;
+  font-size: 21px !important;
+  line-height: 1.15 !important;
+  color: #2c2c2c !important;
+}
+
+.cart-item-category {
+  margin-top: 6px !important;
+  font-size: 10px !important;
+  letter-spacing: 0.25em !important;
+  text-transform: uppercase !important;
+  color: #999 !important;
+}
+
+.cart-remove-button {
+  font-size: 9px !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+  color: #b66 !important;
+  border-bottom: 1px solid transparent !important;
+  padding-bottom: 2px !important;
+  white-space: nowrap !important;
+}
+
+.cart-remove-button:hover {
+  color: #d58fa0 !important;
+  border-bottom-color: #d58fa0 !important;
+}
+
+.cart-quantity {
+  display: inline-flex !important;
+  align-items: center !important;
+  width: fit-content !important;
+  border: 1px solid #e8e4de !important;
+  border-radius: 999px !important;
+  overflow: hidden !important;
+  background: #faf8f5 !important;
+}
+
+.cart-quantity button {
+  width: 34px !important;
+  height: 34px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 16px !important;
+  color: #2c2c2c !important;
+}
+
+.cart-quantity button:hover {
+  color: #d58fa0 !important;
+}
+
+.cart-quantity span {
+  min-width: 30px !important;
+  text-align: center !important;
+  font-size: 13px !important;
+}
+
+.cart-item-price {
+  font-family: var(--font-serif) !important;
+  font-size: 21px !important;
+  color: #d58fa0 !important;
+  white-space: nowrap !important;
+}
+
+.cart-summary {
+  background: #fff !important;
+  border: 1px solid #e8e4de !important;
+  border-radius: 28px !important;
+  padding: 28px !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.03) !important;
+  height: fit-content !important;
+}
+
+/* CARRINHO MOBILE */
+@media (max-width: 520px) {
+  .cart-page {
+    padding-top: 108px !important;
+  }
+
+  .cart-page h1 {
+    font-size: 36px !important;
+  }
+
+  .cart-item {
+    grid-template-columns: 92px 1fr !important;
+    gap: 13px !important;
+    padding: 12px !important;
+    border-radius: 22px !important;
+  }
+
+  .cart-item-image {
+    width: 92px !important;
+    height: 112px !important;
+    border-radius: 16px !important;
+  }
+
+  .cart-item-info {
+    gap: 12px !important;
+  }
+
+  .cart-item-top {
+    align-items: flex-start !important;
+  }
+
+  .cart-item-title {
+    font-size: 17px !important;
+  }
+
+  .cart-item-category {
+    font-size: 8px !important;
+    letter-spacing: 0.18em !important;
+  }
+
+  .cart-remove-button {
+    font-size: 8px !important;
+    letter-spacing: 0.14em !important;
+  }
+
+  .cart-item-bottom {
+    align-items: center !important;
+  }
+
+  .cart-quantity button {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .cart-quantity span {
+    min-width: 24px !important;
+    font-size: 12px !important;
+  }
+
+  .cart-item-price {
+    font-size: 16px !important;
+  }
+
+  .cart-summary {
+    padding: 22px !important;
+    border-radius: 24px !important;
+  }
+}
+
+/* Botão principal do resumo do carrinho */
+.cart-summary button:first-of-type {
+  background: #d58fa0 !important;
+  color: #ffffff !important;
+  min-height: 48px !important;
+  border-radius: 999px !important;
+  font-size: 10px !important;
+  letter-spacing: 0.24em !important;
+  font-weight: 600 !important;
+  box-shadow: 0 12px 28px rgba(213, 143, 160, 0.28) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.cart-summary button:first-of-type:hover {
+  background: #c97f91 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 16px 34px rgba(213, 143, 160, 0.34) !important;
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .cart-summary button:first-of-type {
+    min-height: 46px !important;
+    font-size: 9px !important;
+    letter-spacing: 0.2em !important;
+  }
+}
+
+/* PÁGINAS INTERNAS DAS CATEGORIAS */
+.category-products-grid {
+  width: 100%;
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 1.5rem !important;
+  align-items: start !important;
+}
+
+.category-product-card {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+}
+
+.category-product-card>* {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* Tablet */
+@media (min-width: 521px) and (max-width: 900px) {
+  .category-products-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 1rem !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .category-products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.9rem !important;
   }
 }

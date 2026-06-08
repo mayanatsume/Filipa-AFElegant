@@ -2,44 +2,44 @@ import { motion } from 'framer-motion';
 import ProductCard from './ProductCard';
 import { Product } from '../types';
 
-import img1 from '../assets/images/pulseiras/pulseira-1.png';
-import img2 from '../assets/images/pulseiras/pulseira-2.png';
-import img3 from '../assets/images/pulseiras/pulseira-3.png';
-import img4 from '../assets/images/pulseiras/pulseira-4.png';
-import img5 from '../assets/images/pulseiras/pulseira-5.png';
-import img6 from '../assets/images/pulseiras/pulseira-6.png';
-import img7 from '../assets/images/pulseiras/pulseira-7.png';
-import img8 from '../assets/images/pulseiras/pulseira-8.png';
-import img9 from '../assets/images/pulseiras/pulseira-9.png';
-import img10 from '../assets/images/pulseiras/pulseira-10.png';
-import img11 from '../assets/images/pulseiras/pulseira-11.png';
-import img12 from '../assets/images/pulseiras/pulseira-12.png';
-import img13 from '../assets/images/pulseiras/pulseira-13.png';
-import img14 from '../assets/images/pulseiras/pulseira-14.png';
-import img15 from '../assets/images/pulseiras/pulseira-15.png';
+import img1 from '../assets/images/pulseiras/puls1.jpg';
+import img2 from '../assets/images/pulseiras/pulse2.jpg';
+import img3 from '../assets/images/pulseiras/pulse3.jpg';
+import img4 from '../assets/images/pulseiras/pulse4.jpg';
+import img5 from '../assets/images/pulseiras/pulse5.jpg';
+import img6 from '../assets/images/pulseiras/pulse6.jpg';
+import img7 from '../assets/images/pulseiras/pulse7.jpg';
+import img8 from '../assets/images/pulseiras/pulse8.jpg';
+import img9 from '../assets/images/pulseiras/pulse9.jpg';
+import img10 from '../assets/images/pulseiras/pulse10.jpg';
+import img11 from '../assets/images/pulseiras/pulse11.jpg';
+import img12 from '../assets/images/pulseiras/pulse12.jpg';
+import img13 from '../assets/images/pulseiras/pulse13.jpg';
+import img14 from '../assets/images/pulseiras/pulse14.jpg';
+import img15 from '../assets/images/pulseiras/pulse15.jpg';
 
-import editorialImg from '../assets/images/pulseira-aurora.png';
-import heroImg from '../assets/images/hero.png';
-import colarImg from '../assets/images/colar-perola.png';
+import editorialImg from '../assets/images/hero1.jpg';
+import heroImg from '../assets/images/hero2.jpg';
+import colarImg from '../assets/images/hero4.jpg';
 import logoFilipa from '../assets/images/logo-filipa.png';
 
 // Estrutura com 15 espaços para produtos desta categoria
 export const produtosOriginais = [
-    { id: 'PulseirasPage-1', name: 'Pulseiras Exemplo 1', category: 'Pulseiras', price: 199.90, image: img1, isNew: true },
-    { id: 'PulseirasPage-2', name: 'Pulseiras Exemplo 2', category: 'Pulseiras', price: 149.90, image: img2, isNew: false },
-    { id: 'PulseirasPage-3', name: 'Pulseiras Exemplo 3', category: 'Pulseiras', price: 129.50, image: img3, isNew: false },
-    { id: 'PulseirasPage-4', name: 'Pulseiras Exemplo 4', category: 'Pulseiras', price: 210.00, image: img4, isNew: false },
-    { id: 'PulseirasPage-5', name: 'Pulseiras Exemplo 5', category: 'Pulseiras', price: 0, image: img5, isNew: false },
-    { id: 'PulseirasPage-6', name: 'Pulseiras Exemplo 6', category: 'Pulseiras', price: 0, image: img6, isNew: false },
-    { id: 'PulseirasPage-7', name: 'Pulseiras Exemplo 7', category: 'Pulseiras', price: 0, image: img7, isNew: false },
-    { id: 'PulseirasPage-8', name: 'Pulseiras Exemplo 8', category: 'Pulseiras', price: 0, image: img8, isNew: false },
-    { id: 'PulseirasPage-9', name: 'Pulseiras Exemplo 9', category: 'Pulseiras', price: 0, image: img9, isNew: false },
-    { id: 'PulseirasPage-10', name: 'Pulseiras Exemplo 10', category: 'Pulseiras', price: 0, image: img10, isNew: false },
-    { id: 'PulseirasPage-11', name: 'Pulseiras Exemplo 11', category: 'Pulseiras', price: 0, image: img11, isNew: false },
-    { id: 'PulseirasPage-12', name: 'Pulseiras Exemplo 12', category: 'Pulseiras', price: 0, image: img12, isNew: false },
-    { id: 'PulseirasPage-13', name: 'Pulseiras Exemplo 13', category: 'Pulseiras', price: 0, image: img13, isNew: false },
-    { id: 'PulseirasPage-14', name: 'Pulseiras Exemplo 14', category: 'Pulseiras', price: 0, image: img14, isNew: false },
-    { id: 'PulseirasPage-15', name: 'Pulseiras Exemplo 15', category: 'Pulseiras', price: 0, image: img15, isNew: false }
+    { id: 'PulseirasPage-1', name: 'Pulseiras de Pedra', category: 'Pulseiras', price: 7.00, image: img1, isNew: true },
+    { id: 'PulseirasPage-2', name: 'Pulseira de Missanga', category: 'Pulseiras', price: 5.00, image: img2, isNew: false },
+    { id: 'PulseirasPage-3', name: 'Pulseiras Folha (da cor de preferência)', category: 'Pulseiras', price: 8.00, image: img3, isNew: false },
+    { id: 'PulseirasPage-4', name: 'Pulseira de Missanga', category: 'Pulseiras', price: 5.00, image: img4, isNew: false },
+    { id: 'PulseirasPage-5', name: 'Pulseiras Casal de Infinito Conjunto ', category: 'Pulseiras', price: 10.00, image: img5, isNew: false },
+    { id: 'PulseirasPage-6', name: 'Pulseira ajustável Família', category: 'Pulseiras', price: 8.50, image: img6, isNew: false },
+    { id: 'PulseirasPage-7', name: 'Pulseiras Fina Missanga Azul', category: 'Pulseiras', price: 7.00, image: img7, isNew: false },
+    { id: 'PulseirasPage-8', name: 'Braceletes Ajustáveis', category: 'Pulseiras', price: 12.00, image: img8, isNew: false },
+    { id: 'PulseirasPage-9', name: 'Pulseiras Fina Missanga Pérola e Dourada', category: 'Pulseiras', price: 7.00, image: img9, isNew: false },
+    { id: 'PulseirasPage-10', name: 'Pulseiras Fina Missanga Vermelha', category: 'Pulseiras', price: 7.00, image: img10, isNew: false },
+    { id: 'PulseirasPage-11', name: 'Pulseira de Missanga', category: 'Pulseiras', price: 5.00, image: img11, isNew: false },
+    { id: 'PulseirasPage-12', name: 'Pulseira de Missanga', category: 'Pulseiras', price: 5.00, image: img12, isNew: false },
+    { id: 'PulseirasPage-13', name: 'Pulseira de Missanga', category: 'Pulseiras', price: 5.00, image: img13, isNew: false },
+    { id: 'PulseirasPage-14', name: 'Pulseira de Missanga', category: 'Pulseiras', price: 5.00, image: img14, isNew: false },
+    { id: 'PulseirasPage-15', name: 'Pulseira de Missanga', category: 'Pulseiras', price: 5.00, image: img15, isNew: false }
 ];
 
 const PulseirasPage = () => {
@@ -136,9 +136,9 @@ const PulseirasPage = () => {
                         <h2 className="text-4xl md:text-5xl font-serif text-[#2c2c2c]">Pulseiras</h2>
                     </motion.div>
 
-                    <div className="w-full flex flex-wrap justify-center gap-4 md:gap-6">
+                    <div className="category-products-grid">
                         {produtosOriginais.map((product) => (
-                            <div key={product.id} className="w-[200px] md:w-[220px]">
+                            <div key={product.id} className="category-product-card">
                                 <ProductCard product={product as Product} />
                             </div>
                         ))}

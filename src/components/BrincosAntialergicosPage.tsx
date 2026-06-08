@@ -2,39 +2,39 @@ import { motion } from 'framer-motion';
 import ProductCard from './ProductCard';
 import { Product } from '../types';
 
-import img1 from '../assets/images/brincos-antialergicos/brinco-antialergico-1.png';
-import img2 from '../assets/images/brincos-antialergicos/brinco-antialergico-2.png';
-import img3 from '../assets/images/brincos-antialergicos/brinco-antialergico-3.png';
-import img4 from '../assets/images/brincos-antialergicos/brinco-antialergico-4.png';
-import img5 from '../assets/images/brincos-antialergicos/brinco-antialergico-5.png';
-import img6 from '../assets/images/brincos-antialergicos/brinco-antialergico-6.png';
-import img7 from '../assets/images/brincos-antialergicos/brinco-antialergico-7.png';
-import img8 from '../assets/images/brincos-antialergicos/brinco-antialergico-8.png';
-import img9 from '../assets/images/brincos-antialergicos/brinco-antialergico-9.png';
-import img10 from '../assets/images/brincos-antialergicos/brinco-antialergico-10.png';
+import img1 from '../assets/images/brincos-antialergicos/antia1.jpg';
+import img2 from '../assets/images/brincos-antialergicos/antia2.jpg';
+import img3 from '../assets/images/brincos-antialergicos/antia3.jpg';
+import img4 from '../assets/images/brincos-antialergicos/antia4.jpg';
+import img5 from '../assets/images/brincos-antialergicos/antia5.jpg';
+import img6 from '../assets/images/brincos-antialergicos/antia6.jpg';
+import img7 from '../assets/images/brincos-antialergicos/antia7.jpg';
+import img8 from '../assets/images/brincos-antialergicos/antia8.jpg';
+import img9 from '../assets/images/brincos-antialergicos/antia9.jpg';
+import img10 from '../assets/images/brincos-antialergicos/antia10.jpg';
 import img11 from '../assets/images/brincos-antialergicos/brinco-antialergico-11.png';
 import img12 from '../assets/images/brincos-antialergicos/brinco-antialergico-12.png';
 import img13 from '../assets/images/brincos-antialergicos/brinco-antialergico-13.png';
 import img14 from '../assets/images/brincos-antialergicos/brinco-antialergico-14.png';
 import img15 from '../assets/images/brincos-antialergicos/brinco-antialergico-15.png';
 
-import heroImg from '../assets/images/hero.png';
-import editorialImg from '../assets/images/pulseira-aurora.png';
-import colarImg from '../assets/images/colar-perola.png';
+import heroImg from '../assets/images/hero2.jpg';
+import editorialImg from '../assets/images/hero1.jpg';
+import colarImg from '../assets/images/hero4.jpg';
 import logoFilipa from '../assets/images/logo-filipa.png';
 
 // Estrutura com 15 espaços para produtos desta categoria
 export const produtosOriginais = [
-    { id: 'BrincosAntialergicosPage-1', name: 'Brincos Antialérgicos Exemplo 1', category: 'Brincos Antialérgicos', price: 199.90, image: img1, isNew: true },
-    { id: 'BrincosAntialergicosPage-2', name: 'Brincos Antialérgicos Exemplo 2', category: 'Brincos Antialérgicos', price: 149.90, image: img2, isNew: false },
-    { id: 'BrincosAntialergicosPage-3', name: 'Brincos Antialérgicos Exemplo 3', category: 'Brincos Antialérgicos', price: 129.50, image: img3, isNew: false },
-    { id: 'BrincosAntialergicosPage-4', name: 'Brincos Antialérgicos Exemplo 4', category: 'Brincos Antialérgicos', price: 210.00, image: img4, isNew: false },
-    { id: 'BrincosAntialergicosPage-5', name: 'Brincos Antialérgicos Exemplo 5', category: 'Brincos Antialérgicos', price: 0, image: img5, isNew: false },
-    { id: 'BrincosAntialergicosPage-6', name: 'Brincos Antialérgicos Exemplo 6', category: 'Brincos Antialérgicos', price: 0, image: img6, isNew: false },
-    { id: 'BrincosAntialergicosPage-7', name: 'Brincos Antialérgicos Exemplo 7', category: 'Brincos Antialérgicos', price: 0, image: img7, isNew: false },
-    { id: 'BrincosAntialergicosPage-8', name: 'Brincos Antialérgicos Exemplo 8', category: 'Brincos Antialérgicos', price: 0, image: img8, isNew: false },
-    { id: 'BrincosAntialergicosPage-9', name: 'Brincos Antialérgicos Exemplo 9', category: 'Brincos Antialérgicos', price: 0, image: img9, isNew: false },
-    { id: 'BrincosAntialergicosPage-10', name: 'Brincos Antialérgicos Exemplo 10', category: 'Brincos Antialérgicos', price: 0, image: img10, isNew: false },
+    { id: 'BrincosAntialergicosPage-1', name: 'Argolas de Zircônias com detalhes de bolinhas', category: 'Brincos Antialérgicos', price: 8.00, image: img1, isNew: true },
+    { id: 'BrincosAntialergicosPage-2', name: 'Argolas Quadrangular de Zircônias', category: 'Brincos Antialérgicos', price: 8.00, image: img2, isNew: false },
+    { id: 'BrincosAntialergicosPage-3', name: 'Mini Argolas "piercings" de Zircônias', category: 'Brincos Antialérgicos', price: 8.00, image: img3, isNew: false },
+    { id: 'BrincosAntialergicosPage-4', name: 'Argolas Anti-alérgicas de flor', category: 'Brincos Antialérgicos', price: 8.00, image: img4, isNew: false },
+    { id: 'BrincosAntialergicosPage-5', name: 'Brincos Antialérgicos de Lagosta', category: 'Brincos Antialérgicos', price: 8.00, image: img5, isNew: false },
+    { id: 'BrincosAntialergicosPage-6', name: 'Argolas Anti-alérgicas de Zircônias', category: 'Brincos Antialérgicos', price: 8.00, image: img6, isNew: false },
+    { id: 'BrincosAntialergicosPage-7', name: 'Argolas Quadrangular de Zircônias', category: 'Brincos Antialérgicos', price: 8.00, image: img7, isNew: false },
+    { id: 'BrincosAntialergicosPage-8', name: 'Mini Argolas "Piercings" de Zircônias.', category: 'Brincos Antialérgicos', price: 8.00, image: img8, isNew: false },
+    { id: 'BrincosAntialergicosPage-9', name: 'Brincos Antialérgicos de Cão', category: 'Brincos Antialérgicos', price: 8.00, image: img9, isNew: false },
+    { id: 'BrincosAntialergicosPage-10', name: 'Brincos Rosa em Zircônia', category: 'Brincos Antialérgicos', price: 8.00, image: img10, isNew: false },
     { id: 'BrincosAntialergicosPage-11', name: 'Brincos Antialérgicos Exemplo 11', category: 'Brincos Antialérgicos', price: 0, image: img11, isNew: false },
     { id: 'BrincosAntialergicosPage-12', name: 'Brincos Antialérgicos Exemplo 12', category: 'Brincos Antialérgicos', price: 0, image: img12, isNew: false },
     { id: 'BrincosAntialergicosPage-13', name: 'Brincos Antialérgicos Exemplo 13', category: 'Brincos Antialérgicos', price: 0, image: img13, isNew: false },
@@ -136,9 +136,9 @@ const BrincosAntialergicosPage = () => {
                         <h2 className="text-4xl md:text-5xl font-serif text-[#2c2c2c]">Brincos Antialérgicos</h2>
                     </motion.div>
 
-                    <div className="w-full flex flex-wrap justify-center gap-4 md:gap-6">
+                    <div className="category-products-grid">
                         {produtosOriginais.map((product) => (
-                            <div key={product.id} className="w-[200px] md:w-[220px]">
+                            <div key={product.id} className="category-product-card">
                                 <ProductCard product={product as Product} />
                             </div>
                         ))}

@@ -136,9 +136,9 @@ const ConjuntosPage = () => {
                         <h2 className="text-4xl md:text-5xl font-serif text-[#2c2c2c]">Conjuntos</h2>
                     </motion.div>
 
-                    <div className="w-full flex flex-wrap justify-center gap-4 md:gap-6">
+                    <div className="category-products-grid">
                         {produtosOriginais.map((product) => (
-                            <div key={product.id} className="w-[200px] md:w-[220px]">
+                            <div key={product.id} className="category-product-card">
                                 <ProductCard product={product as Product} />
                             </div>
                         ))}

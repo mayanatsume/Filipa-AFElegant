@@ -2,15 +2,15 @@ import { motion } from 'framer-motion';
 import ProductCard from './ProductCard';
 import { Product } from '../types';
 
-import img1 from '../assets/images/colares/colar-1.png';
-import img2 from '../assets/images/colares/colar-2.png';
-import img3 from '../assets/images/colares/colar-3.png';
-import img4 from '../assets/images/colares/colar-4.png';
-import img5 from '../assets/images/colares/colar-5.png';
-import img6 from '../assets/images/colares/colar-6.png';
-import img7 from '../assets/images/colares/colar-7.png';
-import img8 from '../assets/images/colares/colar-8.png';
-import img9 from '../assets/images/colares/colar-9.png';
+import img1 from '../assets/images/colares/colar1.jpg';
+import img2 from '../assets/images/colares/colar2.jpg';
+import img3 from '../assets/images/colares/colar3.jpg';
+import img4 from '../assets/images/colares/colar4.jpg';
+import img5 from '../assets/images/colares/colar5.jpg';
+import img6 from '../assets/images/colares/colar6.jpg';
+import img7 from '../assets/images/colares/colar7.jpg';
+import img8 from '../assets/images/colares/colar8.jpg';
+import img9 from '../assets/images/colares/colar9.jpg';
 import img10 from '../assets/images/colares/colar-10.png';
 import img11 from '../assets/images/colares/colar-11.png';
 import img12 from '../assets/images/colares/colar-12.png';
@@ -18,22 +18,22 @@ import img13 from '../assets/images/colares/colar-13.png';
 import img14 from '../assets/images/colares/colar-14.png';
 import img15 from '../assets/images/colares/colar-15.png';
 
-import colarImg from '../assets/images/colar-perola.png';
-import heroImg from '../assets/images/hero.png';
-import editorialImg from '../assets/images/pulseira-aurora.png';
+import colarImg from '../assets/images/hero4.jpg';
+import heroImg from '../assets/images/hero2.jpg';
+import editorialImg from '../assets/images/hero1.jpg';
 import logoFilipa from '../assets/images/logo-filipa.png';
 
 // Estrutura com 15 espaços para produtos desta categoria
 export const produtosOriginais = [
-    { id: 'ColaresPage-1', name: 'Colares Exemplo 1', category: 'Colares', price: 199.90, image: img1, isNew: true },
-    { id: 'ColaresPage-2', name: 'Colares Exemplo 2', category: 'Colares', price: 149.90, image: img2, isNew: false },
-    { id: 'ColaresPage-3', name: 'Colares Exemplo 3', category: 'Colares', price: 129.50, image: img3, isNew: false },
-    { id: 'ColaresPage-4', name: 'Colares Exemplo 4', category: 'Colares', price: 210.00, image: img4, isNew: false },
-    { id: 'ColaresPage-5', name: 'Colares Exemplo 5', category: 'Colares', price: 0, image: img5, isNew: false },
-    { id: 'ColaresPage-6', name: 'Colares Exemplo 6', category: 'Colares', price: 0, image: img6, isNew: false },
-    { id: 'ColaresPage-7', name: 'Colares Exemplo 7', category: 'Colares', price: 0, image: img7, isNew: false },
-    { id: 'ColaresPage-8', name: 'Colares Exemplo 8', category: 'Colares', price: 0, image: img8, isNew: false },
-    { id: 'ColaresPage-9', name: 'Colares Exemplo 9', category: 'Colares', price: 0, image: img9, isNew: false },
+    { id: 'ColaresPage-1', name: 'Colar Árvore da Vida', category: 'Colares', price: 12.00, image: img1, isNew: true },
+    { id: 'ColaresPage-2', name: 'Colar Família', category: 'Colares', price: 13.00, image: img2, isNew: false },
+    { id: 'ColaresPage-3', name: 'Colar Estrela', category: 'Colares', price: 12.00, image: img3, isNew: false },
+    { id: 'ColaresPage-4', name: 'Colar Extenso de Coração', category: 'Colares', price: 7.00, image: img4, isNew: false },
+    { id: 'ColaresPage-5', name: 'Colar Flor Banhado em Zircônia', category: 'Colares', price: 8.00, image: img5, isNew: false },
+    { id: 'ColaresPage-6', name: 'Colar Avião', category: 'Colares', price: 12.00, image: img6, isNew: false },
+    { id: 'ColaresPage-7', name: 'Colar de Pedras Frisadas', category: 'Colares', price: 15.00, image: img7, isNew: false },
+    { id: 'ColaresPage-8', name: 'Colar Madripérola Com Pendente de Coração', category: 'Colares', price: 15.00, image: img8, isNew: false },
+    { id: 'ColaresPage-9', name: 'Colar Madripérola Com Pendente de Coração', category: 'Colares', price: 15.00, image: img9, isNew: false },
     { id: 'ColaresPage-10', name: 'Colares Exemplo 10', category: 'Colares', price: 0, image: img10, isNew: false },
     { id: 'ColaresPage-11', name: 'Colares Exemplo 11', category: 'Colares', price: 0, image: img11, isNew: false },
     { id: 'ColaresPage-12', name: 'Colares Exemplo 12', category: 'Colares', price: 0, image: img12, isNew: false },
@@ -136,9 +136,9 @@ const ColaresPage = () => {
                         <h2 className="text-4xl md:text-5xl font-serif text-[#2c2c2c]">Colares</h2>
                     </motion.div>
 
-                    <div className="w-full flex flex-wrap justify-center gap-4 md:gap-6">
+                    <div className="category-products-grid">
                         {produtosOriginais.map((product) => (
-                            <div key={product.id} className="w-[200px] md:w-[220px]">
+                            <div key={product.id} className="category-product-card">
                                 <ProductCard product={product as Product} />
                             </div>
                         ))}
